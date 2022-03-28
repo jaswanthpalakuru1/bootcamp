@@ -1,0 +1,19 @@
+extends layout 
+
+block content 
+  div
+    form(action='/books/addNewBook/#{newBookId}/#{newBookName}/#{newBookAuthor}',method='post')
+      div(data-role='fieldcontain')
+        fieldset(data-role='controlgroup')
+          label(for='email') book Id
+            input(id='email',type='text',value='',placeholder='Book Name',name='newBookId')
+      div(data-role='fieldcontain')
+        fieldset(data-role='controlgroup')
+          label(for='email') book Name
+            input(id='email',type='text',value='',placeholder='Book Name',name='newBookName')
+      div(data-role='fieldcontain')
+        fieldset(data-role='controlgroup')
+          label(for='email') book Author
+            input(id='email',type='text',value='',placeholder='Book Name',name='newBookAuthor')
+      div(data-role='fieldcontain')   
+        input(type='submit',value='Sign Up',data-transition='fade', data-theme='c')
